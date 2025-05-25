@@ -3,12 +3,8 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './main.css';
 
-const root = document.querySelector('#root');
-
-if (root) {
-	createRoot(root).render(
-		<StrictMode>
-			<App />
-		</StrictMode>,
-	);
-}
+createRoot(document.querySelector('#root') as HTMLDivElement).render(
+	<StrictMode>
+		<App />
+	</StrictMode>,
+);
